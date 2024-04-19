@@ -1,0 +1,11 @@
+<launch>
+	
+	<!-- Include the MAVROS node with SITL and Gazebo -->
+	<include file="$(find px4)/launch/mavros_posix_sitl.launch">
+		<arg name="world" value="$(find final_proj)/worlds/rooms_office.world"/>
+		<arg name="vehicle" value="iris_depth_camera"/>
+	</include>
+
+	<!-- Our node to control the drone -->
+    <!-- <node name="mission_control" pkg="final_proj" type="mission_control.py" /> -->
+</launch>
